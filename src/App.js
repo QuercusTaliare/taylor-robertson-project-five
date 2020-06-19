@@ -1,13 +1,22 @@
 import React, { Component, Fragment } from 'react';
-import './App.css';
+import Form from './components/Form';
 
 class App extends Component {
   
+  constructor() {
+
+    super();
+    this.state = {
+
+    }
+
+  }
+
   render() {
 
     return (
       <Fragment>
-
+        <Form />
       </Fragment>
     );
 
