@@ -6,7 +6,7 @@ class Form extends Component {
     
     return (
 
-      <Fragment>
+      <div className="form">
 
         <header>
           <h1>How's it going?</h1>
@@ -14,10 +14,62 @@ class Form extends Component {
         </header>
         <main>
           <form>
-
+            <fieldset>
+              <legend>Emotion 1</legend>
+              <select name="" id="">
+                <option value="">Select First Emotion</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+              <input type="number"/>
+            </fieldset>
+            <fieldset>
+              <legend>Emotion 2</legend>
+              <select name="" id="">
+                <option value="">Select Second Emotion</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+              <input type="number" />
+            </fieldset>
+            <fieldset>
+              <legend>Emotion 3</legend>
+              <select name="" id="">
+                <option value="">Select Third Emotion</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+              <input type="number" />
+            </fieldset>
+            <button type="submit">Submit</button>
           </form>
         </main>
-      </Fragment>
+
+      </div>
 
     )
 
