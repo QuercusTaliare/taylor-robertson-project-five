@@ -17,21 +17,6 @@ class App extends Component {
       emotionBpercentage: 0,
       emotionCpercentage: 0
 
-        // emotionA: {
-        //   typeA: "",
-        //   percentageA: ""
-        // },
-        // emotionB: {
-        //   typeB: "",
-        //   percentageB: ""
-        // }, 
-        // emotionC: {
-        //   typeC: "",
-        //   percentageC: ""
-        // }
-
-      
-
     }
 
   }
@@ -69,6 +54,7 @@ class App extends Component {
 
   }
 
+  // Updates state everytime a value changes in either the dropdowns or the inputs
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
@@ -76,7 +62,8 @@ class App extends Component {
 
   }
 
-  addChart = (e) => {
+
+  addChartData = (e) => {
 
     e.preventDefault();
 
@@ -188,13 +175,13 @@ class App extends Component {
                   value={this.state.emotionCpercentage}
                 />
               </fieldset>
-              <button type="submit" onClick={this.addChart}>Submit</button>
+              <button type="submit" onClick={this.addChartData}>Submit</button>
             </form>
           </main>
 
         </div>
 
-        <Display />
+        <Display chartData={this.state.emotions} />
 
       </Fragment>
     );
