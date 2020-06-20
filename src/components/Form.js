@@ -65,7 +65,7 @@ class Form extends Component {
               </select>
               <input type="number" />
             </fieldset>
-            <button type="submit">Submit</button>
+            <button type="submit" onClick={this.props.addChart}>Submit</button>
           </form>
         </main>
 
