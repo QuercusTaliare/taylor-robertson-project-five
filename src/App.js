@@ -107,22 +107,24 @@ class App extends Component {
             <h1>How's it going?</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laudantium eius, iste minus beatae sed id ex accusantium. Ducimus reiciendis ab deleniti tempore nostrum doloribus quos aliquam veniam dolores dolorum!</p>
           </header>
+
           <main>
             <form>
+
               <fieldset>
                 <legend>Emotion 1</legend>
                 <select name="emotionAtype" id="" onChange={this.handleChange} value={this.state.emotionAtype}>
                   <option value="">Select First Emotion</option>
                   <option value="happy">Happy</option>
                   <option value="elated">Elated</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
+                  <option value="proud">Proud</option>
+                  <option value="amazed">Amazed</option>
+                  <option value="excited">Excited</option>
+                  <option value="determined">Determined</option>
+                  <option value="content">Content</option>
+                  <option value="hopeful">Hopeful</option>
+                  <option value="relieved">Relieved</option>
+                  <option value="joy">Joy</option>
                 </select>
                 <input 
                   type="number" 
@@ -135,16 +137,16 @@ class App extends Component {
                 <legend>Emotion 2</legend>
                 <select name="emotionBtype" id="" onChange={this.handleChange} value={this.state.emotionBtype}>
                   <option value="">Select Second Emotion</option>
-                  <option value="confused">Confused</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
+                  <option value="insecure">Insecure</option>
+                  <option value="annoyed">Annoyed</option>
+                  <option value="anxious">Anxious</option>
+                  <option value="bored">Bored</option>
+                  <option value="frustrated">Frustrated</option>
+                  <option value="sad">Sad</option>
+                  <option value="jealous">Jealous</option>
+                  <option value="hurt">Hurt</option>
+                  <option value="disgusted">Disgusted</option>
+                  <option value="angry">Angry</option>
                 </select>
                 <input 
                   type="number"
@@ -157,16 +159,16 @@ class App extends Component {
                 <legend>Emotion 3</legend>
                 <select name="emotionCtype" id="" onChange={this.handleChange} value={this.state.emotionCtype}>
                   <option value="">Select Third Emotion</option>
-                  <option value="frustrated">Frustrated</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
+                  <option value="confused">Confused</option>
+                  <option value="hungry">Hungry</option>
+                  <option value="silly">Silly</option>
+                  <option value="peaceful">Peaceful</option>
+                  <option value="awed">Awed</option>
+                  <option value="awkward">Awkward</option>
+                  <option value="nostalgia">Nostalgia</option>
+                  <option value="triumphant">Triumphant</option>
+                  <option value="curious">Curious</option>
+                  <option value="entranced">Entranced</option>
                 </select>
                 <input
                   type="number"
@@ -176,6 +178,7 @@ class App extends Component {
                 />
               </fieldset>
               <button type="submit" onClick={this.addChartData}>Submit</button>
+
             </form>
           </main>
 
