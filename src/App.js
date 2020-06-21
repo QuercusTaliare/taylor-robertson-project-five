@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import firebase from './firebase.js';
+// import './prefix-free.js';
+// import './conic-gradient.js';
 import Display from './components/Display';
 
 class App extends Component {
