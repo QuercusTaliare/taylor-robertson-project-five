@@ -57,6 +57,7 @@ class Display extends Component {
                           value: parseInt(emotionC.percentage)
                         },
                       ]}
+                      // label={() => emotionA.type}
                       // labelPosition={50}
                       // lengthAngle={360}
                       // lineWidth={15}
@@ -69,7 +70,7 @@ class Display extends Component {
 
                 </div>
 
-                
+
 
               </li>
 
