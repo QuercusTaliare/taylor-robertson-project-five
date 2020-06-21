@@ -1,5 +1,4 @@
-import './prefix-free';
-import './conic-gradient';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
