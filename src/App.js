@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import firebase from './firebase.js';
 import Display from './components/Display';
+import Footer from './components/Footer';
 
 class App extends Component {
   
@@ -21,6 +22,7 @@ class App extends Component {
 
   }
 
+  // Updates state everytime the database is updated
   componentDidMount() {
 
     // create a variable to store a reference to our database
@@ -38,9 +40,12 @@ class App extends Component {
       // 2. Make changes to copy of State
       for (let entry in data) {
 
-        // newState.push(data);
+        // newState.push(data[entry]);
 
-        newState.push(data[entry])
+        newState.push({
+          threeEmotions: data[entry],
+          id: entry
+        })
 
       }
 
@@ -51,7 +56,7 @@ class App extends Component {
 
   }
 
-  // Updates state everytime a value changes in either the dropdowns or the inputs
+  // HANDLE CHANGE FUNCTION - Updates state everytime a value changes in either the dropdowns or the inputs
   handleChange = (event) => {
 
     this.setState({
@@ -60,7 +65,7 @@ class App extends Component {
 
   }
 
-
+  // ADD CHART DATA FUNCTION - Takes form input data and puts it into database
   addChartData = (e) => {
 
     e.preventDefault();
@@ -105,13 +110,17 @@ class App extends Component {
         <div className="form" id="form">
 
           <header>
-            <h1>How's it going?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laudantium eius, iste minus beatae sed id ex accusantium. Ducimus reiciendis ab deleniti tempore nostrum doloribus quos aliquam veniam dolores dolorum!</p>
+            <h1>Pie me a Sliver</h1>
+            <ol>
+              <li>Choose 3 emotions that you're feeling the most right now.  Tip: <em>You have to choose all 3!</em></li>
+              <li>Decide how much of each emotion you're feeling.  Tip: <em>These have to add up to 100%!</em></li>
+              <li>Press Submit and see your pie-chart come to life!</li>
+            </ol>
           </header>
 
           <main>
             <form>
-
+              <h2>How are you feeling?</h2>
               <fieldset>
                 <legend>Emotion 1</legend>
                 <select name="emotionAtype" id="" onChange={this.handleChange} value={this.state.emotionAtype}>
@@ -202,6 +211,7 @@ class App extends Component {
         </div>
 
         <Display chartData={this.state.emotions} />
+        <Footer />
 
       </Fragment>
     );

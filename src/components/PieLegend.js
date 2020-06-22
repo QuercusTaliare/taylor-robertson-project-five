@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 class PieLegend extends Component {
 
   render() {
 
-    const { emotionA, emotionB, emotionC } = this.props.emotionEntry;
+    const { emotionA, emotionB, emotionC } = this.props.emotionEntry.threeEmotions;
 
     return (
 
