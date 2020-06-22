@@ -20,6 +20,7 @@ class App extends Component {
 
     }
 
+    this.scrollDisplay = React.createRef();
   }
 
   // Updates state everytime the database is updated
@@ -97,6 +98,8 @@ class App extends Component {
       emotionCpercentage: 34,
       emotionCtype: "",
     })
+
+    window.scrollTo(0, this.scrollDisplay.current.offsetTop)
     
   }
 
@@ -210,7 +213,11 @@ class App extends Component {
 
         </div>
 
-        <Display chartData={this.state.emotions} />
+        
+        <Display chartData={this.state.emotions} scrollDisplay={this.scrollDisplay}/>
+        
+
+
         <Footer />
 
       </Fragment>

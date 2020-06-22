@@ -9,7 +9,7 @@ class Display extends Component {
   render() {
 
     return (
-      <Fragment>
+      <section ref={this.props.scrollDisplay}>
 
         <h2>Pie-ary: a diary told through pies</h2>
 
@@ -26,7 +26,7 @@ class Display extends Component {
 
               <li key={emotionEntry.id}>
 
-                <div className="chart-wrapper">
+                <div className="chart-wrapper" aria-label={`An emotional pie-chart comprised of ${emotionA.type} (${emotionA.percentage}%), ${emotionB.type} (${emotionB.percentage}%), and ${emotionC.type} (${emotionC.percentage}%)`} >
                     {/* Pre-built component from react-minimal-pie-chart library */}
                     <PieChart
                       // animation
@@ -75,7 +75,7 @@ class Display extends Component {
 
         <a href="#form">Add Another</a>
 
-      </Fragment>
+      </section>
       
     )
 
