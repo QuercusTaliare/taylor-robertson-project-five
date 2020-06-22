@@ -13,9 +13,9 @@ class App extends Component {
       emotionAtype: "",
       emotionBtype: "",
       emotionCtype: "",
-      emotionApercentage: 0,
-      emotionBpercentage: 0,
-      emotionCpercentage: 0
+      emotionApercentage: 33,
+      emotionBpercentage: 33,
+      emotionCpercentage: 34
 
     }
 
@@ -26,28 +26,25 @@ class App extends Component {
     // create a variable to store a reference to our database
     const dbRef = firebase.database().ref();
 
-    // get all the values within the database
-    // 1. returning a current snapshot of what is in our DB
-    // 2. continue watching our DB and return a snapshot of it when something is added/removed/updated
+    // Constantly monitor what values are in the database, and when something changes, run callback function
     dbRef.on('value', (response) => {
 
-      // 1. Make copy of State
-      // a variable that we will setState with which we'll update our books with
+      // 1. a) Make copy of State
       const newState = [];
 
-      // Gets information from database
+      // 1. b) Get information from database
       const data = response.val();
 
       // 2. Make changes to copy of State
-      // Place the database information within the copy of state
       for (let entry in data) {
+
+        // newState.push(data);
 
         newState.push(data[entry])
 
       }
 
       // 3. Set State with changed copy
-      // automatically triggers the render method
       this.setState({ emotions: newState });
 
     })
@@ -56,6 +53,7 @@ class App extends Component {
 
   // Updates state everytime a value changes in either the dropdowns or the inputs
   handleChange = (event) => {
+
     this.setState({
       [event.target.name]: event.target.value,
     })
@@ -66,39 +64,40 @@ class App extends Component {
   addChartData = (e) => {
 
     e.preventDefault();
+    
+    const dbRef = firebase.database().ref();
 
-    console.log(this)
+    dbRef.push({
 
-    // const dbRef = firebase.database().ref();
+      emotionA: {
+        percentage: this.state.emotionApercentage,
+        type: this.state.emotionAtype
+      },
+      emotionB: {
+        percentage: this.state.emotionBpercentage,
+        type: this.state.emotionBtype
+      },
+      emotionC: {
+        percentage: this.state.emotionCpercentage,
+        type: this.state.emotionCtype
+      }
 
-    // dbRef.push({
-    //   emotionA: {
-    //     percentage: this.state.emotionApercentage,
-    //     type: this.state.emotionAtype
-    //   },
-    //   emotionB: {
-    //     percentage: this.state.emotionBpercentage,
-    //     type: this.state.emotionBtype
-    //   },
-    //   emotionC: {
-    //     percentage: this.state.emotionCpercentage,
-    //     type: this.state.emotionCtype
-    //   }
+    });
 
-    // });
-
-    // this.setState({ 
-    //   emotionApercentage: "",
-    //   emotionAtype: 0,
-    //   emotionBpercentage: "",
-    //   emotionBtype: 0,
-    //   emotionCpercentage: "",
-    //   emotionCtype: 0,
-    // })
-
+    this.setState({ 
+      emotionApercentage: 33,
+      emotionAtype: "",
+      emotionBpercentage: 33,
+      emotionBtype: "",
+      emotionCpercentage: 34,
+      emotionCtype: "",
+    })
+    
   }
 
   render() {
+
+    const emotionPercentage = parseInt(this.state.emotionApercentage) + parseInt(this.state.emotionBpercentage) + parseInt(this.state.emotionCpercentage);
 
     return (
       <Fragment>
@@ -133,6 +132,8 @@ class App extends Component {
                   name="emotionApercentage" 
                   onChange={this.handleChange} 
                   value={this.state.emotionApercentage}
+                  min="1"
+                  max="98"
                 />
               </fieldset>
               <fieldset>
@@ -155,6 +156,8 @@ class App extends Component {
                   name="emotionBpercentage"
                   onChange={this.handleChange}
                   value={this.state.emotionBpercentage} 
+                  min="1"
+                  max="98"
                 />
               </fieldset>
               <fieldset>
@@ -177,9 +180,21 @@ class App extends Component {
                   name="emotionCpercentage"
                   onChange={this.handleChange}
                   value={this.state.emotionCpercentage}
+                  min="1"
+                  max="98"
                 />
               </fieldset>
-              <button type="submit" onClick={this.addChartData}>Submit</button>
+              
+              
+              <div>
+                <p>Please Note: All the percentages you enter need to add up to 100%</p>
+                <p>{emotionPercentage} / 100%</p>
+              </div>
+
+              {(emotionPercentage === 100 && this.state.emotionAtype !== "" && this.state.emotionBtype !== "" && this.state.emotionCtype !== "") 
+                ? <button type="submit" onClick={this.addChartData}>Submit</button> 
+                : null}
+              
 
             </form>
           </main>

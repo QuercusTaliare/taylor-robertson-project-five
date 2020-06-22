@@ -19,6 +19,8 @@ class Display extends Component {
            
           {this.props.chartData.map((emotionEntry, index) => {
 
+            console.log(emotionEntry);
+
             const { emotionA, emotionB, emotionC } = emotionEntry;
             
             return (
