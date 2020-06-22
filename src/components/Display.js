@@ -35,17 +35,17 @@ class Display extends Component {
                       // center={[50, 50]}
                       data={[
                         {
-                          color: "#E38627",
+                          color: "#3F84E5",
                           title: emotionA.type,
                           value: parseInt(emotionA.percentage)
                         },
                         {
-                          color: "#C13C37",
+                          color: "#960200",
                           title: emotionB.type,
                           value: parseInt(emotionB.percentage)
                         },
                         {
-                          color: "#6A2135",
+                          color: "#3F784C",
                           title: emotionC.type,
                           value: parseInt(emotionC.percentage)
                         },
