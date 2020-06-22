@@ -67,32 +67,34 @@ class App extends Component {
 
     e.preventDefault();
 
-    const dbRef = firebase.database().ref();
+    console.log(this)
 
-    dbRef.push({
-      emotionA: {
-        percentage: this.state.emotionApercentage,
-        type: this.state.emotionAtype
-      },
-      emotionB: {
-        percentage: this.state.emotionBpercentage,
-        type: this.state.emotionBtype
-      },
-      emotionC: {
-        percentage: this.state.emotionCpercentage,
-        type: this.state.emotionCtype
-      }
+    // const dbRef = firebase.database().ref();
 
-    });
+    // dbRef.push({
+    //   emotionA: {
+    //     percentage: this.state.emotionApercentage,
+    //     type: this.state.emotionAtype
+    //   },
+    //   emotionB: {
+    //     percentage: this.state.emotionBpercentage,
+    //     type: this.state.emotionBtype
+    //   },
+    //   emotionC: {
+    //     percentage: this.state.emotionCpercentage,
+    //     type: this.state.emotionCtype
+    //   }
 
-    this.setState({ 
-      emotionApercentage: "",
-      emotionAtype: 0,
-      emotionBpercentage: "",
-      emotionBtype: 0,
-      emotionCpercentage: "",
-      emotionCtype: 0,
-    })
+    // });
+
+    // this.setState({ 
+    //   emotionApercentage: "",
+    //   emotionAtype: 0,
+    //   emotionBpercentage: "",
+    //   emotionBtype: 0,
+    //   emotionCpercentage: "",
+    //   emotionCtype: 0,
+    // })
 
   }
 
@@ -101,7 +103,7 @@ class App extends Component {
     return (
       <Fragment>
 
-        <div className="form">
+        <div className="form" id="form">
 
           <header>
             <h1>How's it going?</h1>

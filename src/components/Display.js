@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-// import PieChart from './PieChart';
 import { PieChart } from 'react-minimal-pie-chart';
+import PieLegend from './PieLegend';
 
 // https://github.com/toomuchdesign/react-minimal-pie-chart
 
@@ -9,13 +9,6 @@ class Display extends Component {
 
   render() {
 
-    // this.props.chartData.forEach(item => {
-    //   for (let i in item) {
-    //     console.log(item[i].type)
-    //   }
-
-    // })
-
     return (
       <Fragment>
 
@@ -23,14 +16,13 @@ class Display extends Component {
 
         {/* Loops through the emotions array that was passed down through props */}
         <ul>
-          {console.log(this.props.chartData)}
            
           {this.props.chartData.map((emotionEntry, index) => {
 
             const { emotionA, emotionB, emotionC } = emotionEntry;
             
-
             return (
+
               <li>
 
                 <div className="chart-wrapper">
@@ -70,39 +62,17 @@ class Display extends Component {
 
                 </div>
 
-
+                <PieLegend emotionEntry={emotionEntry}/>
 
               </li>
 
-
             )
-
-            // // Creates a new array
-            // const singleEmotions = [];
-
-            // for (let i in emotionEntry) {
-              
-            //   singleEmotions.push({
-            //     type: emotionEntry[i].type,
-            //     percentage: parseInt(emotionEntry[i].percentage)
-              
-            //   });
-            //   // emotionPercentage.push(emotionEntry[i].percentage);
-            //   // console.log(emotionEntry[i].type)
-
-            // }
-
-            // singleEmotions.map((emotion, index) => {
-              
-
-            // })
-
-
-
 
           })}
 
         </ul>
+
+        <a href="#form">Add Another</a>
 
       </Fragment>
       
