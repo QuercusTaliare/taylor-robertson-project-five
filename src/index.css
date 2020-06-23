@@ -11,12 +11,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* GLOBAL */
-
-    /* font-family: 'Lato', sans-serif;
-
-    font-family: 'Raleway', sans-serif; */
-
 :root {
     --header-font: 'Raleway', sans-serif;
     --main-font: 'Lato', sans-serif;
@@ -24,10 +18,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     --emotionB-color: #960200;
     --emotionC-color: #3F784C;
     --highlight-color: #B2E6D4;
+    --highlight-dark-color: #329A76;
     --neutral-color: #E8F7EE;
 
-    /* #F0E2E7; */
-    /* C17817 */
 }
 
 * {
@@ -73,6 +66,12 @@ a {
     background: var(--highlight-color);
     margin: 40px 0;
     cursor: pointer
+}
+
+.button:hover,
+.button:focus {
+    box-shadow: 0 0 5px 5px inset var(--highlight-dark-color);
+    
 }
 
 
@@ -192,8 +191,8 @@ main .form-incomplete {
 
 main button:hover,
 main button:focus {
-    box-shadow: 0 0 5px 5px inset var(--neutral-color);
-    border: solid 1px var(--highlight-color);    
+    box-shadow: 0 0 5px 5px inset var(--highlight-dark-color);
+
 }
 
 main .button.disabled {
@@ -303,6 +302,11 @@ footer a {
     text-decoration: underline;
 }
 
+footer a:hover,
+footer a:focus {
+    opacity: 0.5;
+}
+
 footer .attributions {
     flex: 1 1 70%;
     padding: 0 20px 0 0;
@@ -331,6 +335,14 @@ footer .me {
 .me li {
     padding-right: 10px;
     font-size: 2rem;
+}
+
+.me .social-icon {
+    font-size: 3rem;
+}
+
+.me .social-icon:hover {
+    opacity: 0.5;
 }
 
 @media (max-width: 600px) {

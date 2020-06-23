@@ -30,13 +30,13 @@ class Footer extends Component {
             <ul>
               <li>
                 <a href="https://twitter.com/taylorRdev" title="Click to access Taylor's Twitter page"target="_blank">
-                  <FontAwesomeIcon icon={faTwitter} size="2x" />
+                  <FontAwesomeIcon icon={faTwitter} size="2x" className="social-icon" />
                 </a>
                 
               </li>
               <li>
                 <a href="https://github.com/QuercusTaliare" title="Click to access the website's Github repo" target="_blank">
-                  <FontAwesomeIcon icon={faGithub} size="2x" />
+                  <FontAwesomeIcon icon={faGithub} size="1x" className="social-icon" />
                 </a>
                 
               </li>

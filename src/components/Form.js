@@ -208,8 +208,9 @@ class Form extends Component {
                       this.addChartData(e);
                       this.props.scrollPage();
                     }}
+                    title="Submit form to create pie chart"
                   >Submit</button>
-                : <button type="submit" className="button disabled">Submit</button>}
+                : <button type="submit" className="button disabled" tabindex="-1">Submit</button>}
 
 
             </form>
