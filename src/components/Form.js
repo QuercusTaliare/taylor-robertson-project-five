@@ -98,7 +98,7 @@ class Form extends Component {
                     onChange={this.handleChange}
                     value={this.state.emotionAtype}
                   >
-                    <option value="">Select First Emotion</option>
+                    <option value="" disabled>Select First Emotion</option>
                     <option value="happy">Happy</option>
                     <option value="elated">Elated</option>
                     <option value="proud">Proud</option>
@@ -132,7 +132,7 @@ class Form extends Component {
                     onChange={this.handleChange}
                     value={this.state.emotionBtype}
                   >
-                    <option value="">Select Second Emotion</option>
+                    <option value="" disabled>Select Second Emotion</option>
                     <option value="insecure">Insecure</option>
                     <option value="annoyed">Annoyed</option>
                     <option value="anxious">Anxious</option>
@@ -166,7 +166,7 @@ class Form extends Component {
                     onChange={this.handleChange}
                     value={this.state.emotionCtype}
                   >
-                    <option value="">Select Third Emotion</option>
+                    <option value="" disabled>Select Third Emotion</option>
                     <option value="confused">Confused</option>
                     <option value="hungry">Hungry</option>
                     <option value="silly">Silly</option>
