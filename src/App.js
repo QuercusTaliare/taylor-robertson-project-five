@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import firebase from './firebase.js';
+import Form from './components/Form';
 import Display from './components/Display';
 import Footer from './components/Footer';
 
@@ -105,12 +106,12 @@ class App extends Component {
 
   render() {
 
-    const emotionPercentage = parseInt(this.state.emotionApercentage) + parseInt(this.state.emotionBpercentage) + parseInt(this.state.emotionCpercentage);
+    // const emotionPercentage = parseInt(this.state.emotionApercentage) + parseInt(this.state.emotionBpercentage) + parseInt(this.state.emotionCpercentage);
 
     return (
       <Fragment>
 
-        <div className="form" id="form">
+        {/* <div className="form" id="form">
 
           <header>
             <h1>Pie me a Sliver</h1>
@@ -249,11 +250,12 @@ class App extends Component {
               </form>
             </main>
 
-          </div> {/* wrapper ends */}
+          </div> wrapper ends */}
 
-        </div> {/* form section ends */}
+        {/* </div> form section ends */}
 
-        
+        <Form />
+
         <Display chartData={this.state.emotions} scrollDisplay={this.scrollDisplay}/>
         
 
