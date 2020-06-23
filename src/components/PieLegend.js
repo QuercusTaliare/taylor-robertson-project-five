@@ -8,17 +8,17 @@ class PieLegend extends Component {
 
     return (
 
-        <ul className="legend">
+        <ul className="legend-list">
 
-          <li>
+          <li className="legend-item">
             <p className="emotion emotion-one">{emotionA.type}</p>
             <p className="percentage">{emotionA.percentage}%</p>
           </li>
-          <li>
+          <li className="legend-item">
             <p className="emotion emotion-two">{emotionB.type}</p>
             <p className="percentage">{emotionB.percentage}%</p>
           </li>
-          <li>
+          <li className="legend-item">
             <p className="emotion emotion-three">{emotionC.type}</p>
             <p className="percentage">{emotionC.percentage}%</p>
           </li>

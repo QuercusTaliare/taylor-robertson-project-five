@@ -15,6 +15,8 @@ class Form extends Component {
     }
   }
 
+  
+
   // HANDLE CHANGE FUNCTION - Updates state everytime a value changes in either the dropdowns or the inputs
   handleChange = (event) => {
 
@@ -192,15 +194,22 @@ class Form extends Component {
 
               </div>
 
-              <p class="percentage-fraction">
+              <p className="percentage-fraction">
                 {(emotionPercentage === 100)
                   ? <span className="form-complete">{emotionPercentage}</span>
                   : <span className="form-incomplete">{emotionPercentage}</span>}%
                 </p>
 
               {(emotionPercentage === 100 && this.state.emotionAtype !== "" && this.state.emotionBtype !== "" && this.state.emotionCtype !== "")
-                ? <button type="submit" className="button" onClick={this.addChartData}>Submit</button>
-                : <button type="submit" className="button disabled" onClick={this.addChartData}>Submit</button>}
+                ? <button 
+                    type="submit" 
+                    className="button" 
+                    onClick={(e) => {
+                      this.addChartData(e);
+                      this.props.scrollPage();
+                    }}
+                  >Submit</button>
+                : <button type="submit" className="button disabled">Submit</button>}
 
 
             </form>

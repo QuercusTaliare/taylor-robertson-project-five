@@ -12,7 +12,7 @@ class Footer extends Component {
 
     return (
       <footer>
-        <h3></h3>
+        <h3>Footer</h3>
         <p>Pie Charts rendered by the wonderful <a href="https://github.com/toomuchdesign/react-minimal-pie-chart">React Minimal Pie Chart</a> library. Towards them, I am feeling 70% grateful, 20% impressed, and 10% inspired</p>
         <p>Icons created by the inimitable <a href="https://www.npmjs.com/package/@fortawesome/react-fontawesome">Font Awesome</a></p>
         <p>Made with <span>♥</span> during emotionally turbulent times in Burlington, ON</p>

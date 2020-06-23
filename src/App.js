@@ -58,6 +58,10 @@ class App extends Component {
 
   }
 
+  scrollPage = () => {
+    window.scrollTo(0, this.scrollDisplay.current.offsetTop)
+  }
+
   // HANDLE CHANGE FUNCTION - Updates state everytime a value changes in either the dropdowns or the inputs
   handleChange = (event) => {
 
@@ -254,7 +258,7 @@ class App extends Component {
 
         {/* </div> form section ends */}
 
-        <Form />
+        <Form scrollPage={this.scrollPage}/>
 
         <Display chartData={this.state.emotions} scrollDisplay={this.scrollDisplay}/>
         

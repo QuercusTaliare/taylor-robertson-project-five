@@ -66,6 +66,17 @@ a {
     
 }
 
+.button {
+    border-radius: 4px;
+    padding: 15px 25px;
+    border: none;
+    background: var(--highlight-color);
+    margin: 40px 0 0 0;
+    cursor: pointer
+}
+
+
+
 .wrapper {
     max-width: 1280px;
 
@@ -113,6 +124,7 @@ main {
     /* margin: 40px 0 0 0; */
     /* box-shadow: -10px -5px 0px 0px var(--highlight-color); */
     /* background: var(--neutral-color); */
+    border-left: solid 10px var(--highlight-color);
 
 }
 
@@ -175,16 +187,16 @@ main .form-incomplete {
     color: red;
 }
 
-main button {
+/* main button {
     border-radius: 4px;
     padding: 15px 25px;
     border: none;
     background: var(--highlight-color);
     margin: 40px 0 0 0;
     cursor: pointer
-}
+} */
 
-main button.disabled {
+main .button.disabled {
     pointer-events: none;
     color: rgba(0,0,0,0.3);
 
@@ -194,7 +206,78 @@ main button.disabled {
 
 /* DISPLAY SECTION  */
 
+.display {
+    border-top: solid 10px var(--highlight-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.display .pie-display-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.display .pie-display-item {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
 .chart-wrapper {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
+}
+
+.display .legend-item {
+    display: flex;
+}
+
+.display .legend-item p {
+    padding: 10px 10px;
+    width: 150px;
+    border-bottom: solid 1px var(--highlight-color);
+    
+}
+
+.display .emotion {
+    text-transform: capitalize;
+}
+
+.display .emotion::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin: 0 25px -3px 0;
+    border-radius: 2px;
+    display: inline-block;
+
+}
+
+.display .emotion-one::before {
+    background: var(--emotionA-color);
+}
+
+.display .emotion-two::before {
+    background: var(--emotionB-color);
+}
+
+.display .emotion-three::before {
+    background: var(--emotionC-color);
+}
+
+.display .percentage {
+    text-align: center;
+}
+
+.display .button {
+
 }
