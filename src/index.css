@@ -24,7 +24,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     --emotionB-color: #960200;
     --emotionC-color: #3F784C;
     --highlight-color: #C17817;
-    --neutral-color: #F0E2E7;
+    --neutral-color: #F9F9F9;
+
+    /* #F0E2E7; */
 }
 
 * {
@@ -81,32 +83,92 @@ header {
     flex-direction: column;
     align-items: center;
     box-shadow: -10px -10px 0px 0px inset var(--highlight-color);
+    /* background-image: linear-gradient(150deg, var(--neutral-color) 70%, var(--highlight-color)); */
 }
 
 /* https://jsfiddle.net/dcodesmith/DruxN/ */
 
 header h1 {
     text-transform: uppercase;
-    margin: 0 0 20px 0;
+    margin: 10px 0 20px 0;
+    font-size: 4rem;
+}
+
+header ol {
+    padding: 10px;
 }
 
 header li {
     list-style-type: upper-roman;
+    list-style-position: inside;
     margin: 0 0 10px 0;
+    padding: 0 10px;
 
 }
 
 main {
-    height: 70vh;
+    height: 70px;
+    /* margin: 40px 0 0 0; */
+    /* box-shadow: -10px -5px 0px 0px var(--highlight-color); */
+
 }
 
-.emotion-entry-container {
+main h2 {
+    margin: 40px 0 20px 0;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+main .emotion-entry-container {
     display: flex;
 }
 
-.form .user-entry {
-    display: block;
+main fieldset {
+    flex: 1 1 auto;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+main .user-entry {
+    border-radius: 4px;
+}
+
+main select {
+    padding: 5px 20px;
+    font-family: var(--main-font);
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+}
+
+main input {
+    font-size: 1.8rem;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+main .percentage-fraction {
+    text-align: center;
+    margin: 40px 0 0 0;
+    font-size: 2.2rem;
+
+}
+
+main button {
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: none;
+    background: var(--highlight-color);
+    color: var(--neutral-color);
+}
+
+main button.disabled {
+    pointer-events: none;
+    color: rgba(0,0,0,0.3);
+}
+
 
 
 /* DISPLAY SECTION  */

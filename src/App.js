@@ -132,7 +132,7 @@ class App extends Component {
                 <div className="emotion-entry-container">
 
                   <fieldset>
-                    <legend>Emotion 1</legend>
+                    <legend className="sr-only">Emotion 1</legend>
                     <select 
                       name="emotionAtype" 
                       className="user-entry" 
@@ -151,19 +151,22 @@ class App extends Component {
                       <option value="relieved">Relieved</option>
                       <option value="joy">Joy</option>
                     </select>
-                    <input 
-                      type="number" 
-                      name="emotionApercentage" 
-                      className="user-entry"
-                      onChange={this.handleChange} 
-                      value={this.state.emotionApercentage}
-                      min="1"
-                      max="98"
-                    />
+                    <div>
+                      <input 
+                        type="number" 
+                        name="emotionApercentage" 
+                        className="user-entry"
+                        onChange={this.handleChange} 
+                        value={this.state.emotionApercentage}
+                        min="1"
+                        max="98"
+                      />
+                      <span>%</span>
+                    </div>
                   </fieldset>
 
                   <fieldset>
-                    <legend>Emotion 2</legend>
+                    <legend className="sr-only">Emotion 2</legend>
                     <select 
                       name="emotionBtype" 
                       className="user-entry" 
@@ -182,19 +185,22 @@ class App extends Component {
                       <option value="disgusted">Disgusted</option>
                       <option value="angry">Angry</option>
                     </select>
-                    <input 
-                      type="number"
-                      name="emotionBpercentage"
-                      className="user-entry"
-                      onChange={this.handleChange}
-                      value={this.state.emotionBpercentage} 
-                      min="1"
-                      max="98"
-                    />
+                    <div>
+                      <input 
+                        type="number"
+                        name="emotionBpercentage"
+                        className="user-entry"
+                        onChange={this.handleChange}
+                        value={this.state.emotionBpercentage} 
+                        min="1"
+                        max="98"
+                        />
+                      <span>%</span>
+                    </div>
                   </fieldset>
 
                   <fieldset>
-                    <legend>Emotion 3</legend>
+                    <legend className="sr-only">Emotion 3</legend>
                     <select 
                       name="emotionCtype" 
                       className="user-entry" 
@@ -213,24 +219,27 @@ class App extends Component {
                       <option value="curious">Curious</option>
                       <option value="entranced">Entranced</option>
                     </select>
-                    <input
-                      type="number"
-                      name="emotionCpercentage"
-                      className="user-entry"
-                      onChange={this.handleChange}
-                      value={this.state.emotionCpercentage}
-                      min="1"
-                      max="98"
-                    />
+                    <div>
+                      <input
+                        type="number"
+                        name="emotionCpercentage"
+                        className="user-entry"
+                        onChange={this.handleChange}
+                        value={this.state.emotionCpercentage}
+                        min="1"
+                        max="98"
+                      />
+                      <span>%</span>
+                    </div>
                   </fieldset>
 
                 </div>
 
-                <p>{emotionPercentage} / 100%</p>
+                <p class="percentage-fraction">{emotionPercentage} / 100%</p>
 
                 {(emotionPercentage === 100 && this.state.emotionAtype !== "" && this.state.emotionBtype !== "" && this.state.emotionCtype !== "") 
-                  ? <button type="submit" onClick={this.addChartData}>Submit</button> 
-                  : null}
+                  ? <button type="submit" className="button" onClick={this.addChartData}>Submit</button> 
+                  : <button type="submit" className="button disabled" onClick={this.addChartData}>Submit</button>}
                 
 
               </form>
