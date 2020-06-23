@@ -23,10 +23,11 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     --emotionA-color: #3F84E5;
     --emotionB-color: #960200;
     --emotionC-color: #3F784C;
-    --highlight-color: #C17817;
-    --neutral-color: #F9F9F9;
+    --highlight-color: #B2E6D4;
+    --neutral-color: #E8F7EE;
 
     /* #F0E2E7; */
+    /* C17817 */
 }
 
 * {
@@ -84,6 +85,7 @@ header {
     align-items: center;
     box-shadow: -10px -10px 0px 0px inset var(--highlight-color);
     /* background-image: linear-gradient(150deg, var(--neutral-color) 70%, var(--highlight-color)); */
+    background: var(--neutral-color);
 }
 
 /* https://jsfiddle.net/dcodesmith/DruxN/ */
@@ -107,14 +109,23 @@ header li {
 }
 
 main {
-    height: 70px;
+    height: 70vh;
     /* margin: 40px 0 0 0; */
     /* box-shadow: -10px -5px 0px 0px var(--highlight-color); */
+    /* background: var(--neutral-color); */
+
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
 }
 
 main h2 {
-    margin: 40px 0 20px 0;
+    padding: 40px 0 20px 0;
     text-align: center;
     font-size: 3.5rem;
 }
@@ -156,17 +167,27 @@ main .percentage-fraction {
 
 }
 
+main .form-complete {
+    color: black;
+}
+
+main .form-incomplete {
+    color: red;
+}
+
 main button {
     border-radius: 4px;
-    padding: 10px 20px;
+    padding: 15px 25px;
     border: none;
     background: var(--highlight-color);
-    color: var(--neutral-color);
+    margin: 40px 0 0 0;
+    cursor: pointer
 }
 
 main button.disabled {
     pointer-events: none;
     color: rgba(0,0,0,0.3);
+
 }
 
 

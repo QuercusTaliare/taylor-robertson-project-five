@@ -235,7 +235,11 @@ class App extends Component {
 
                 </div>
 
-                <p class="percentage-fraction">{emotionPercentage} / 100%</p>
+                <p class="percentage-fraction">
+                  {(emotionPercentage === 100) 
+                    ? <span className="form-complete">{emotionPercentage}</span>
+                    : <span className="form-incomplete">{emotionPercentage}</span>}%
+                </p>
 
                 {(emotionPercentage === 100 && this.state.emotionAtype !== "" && this.state.emotionBtype !== "" && this.state.emotionCtype !== "") 
                   ? <button type="submit" className="button" onClick={this.addChartData}>Submit</button> 
