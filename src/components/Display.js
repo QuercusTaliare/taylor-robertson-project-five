@@ -62,7 +62,7 @@ class Display extends Component {
 
           </ul>
 
-          <a href="#form" className="button">Add Another</a>
+          <a href="#form" className="button" title="Click to be brought to the top of the page, where you can create a pie chart">Add Another</a>
 
         </section>
 

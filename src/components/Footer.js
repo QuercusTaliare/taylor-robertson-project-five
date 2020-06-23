@@ -12,20 +12,40 @@ class Footer extends Component {
 
     return (
       <footer>
-        <h3>Footer</h3>
-        <p>Pie Charts rendered by the wonderful <a href="https://github.com/toomuchdesign/react-minimal-pie-chart">React Minimal Pie Chart</a> library. Towards them, I am feeling 70% grateful, 20% impressed, and 10% inspired</p>
-        <p>Icons created by the inimitable <a href="https://www.npmjs.com/package/@fortawesome/react-fontawesome">Font Awesome</a></p>
-        <p>Made with <span>♥</span> during emotionally turbulent times in Burlington, ON</p>
-        <nav>
+        <section className="attributions">
+
+          <h3>Thanks</h3>
+          <p>Towards the following, I am feeling 70% grateful, 20% impressed, and 10% inspired</p>
           <ul>
-            <li title="Click to access Taylor's Twitter page">
-              <FontAwesomeIcon icon={faTwitter} />
-            </li>
-            <li title="Click to access the website's Github repo">
-              <FontAwesomeIcon icon={faGithub} />
-            </li>
+            <li>Pie Charts rendered by the wonderful <a href="https://github.com/toomuchdesign/react-minimal-pie-chart" title="Visit the react-minimal-pie-chart GitHub repo" target="_blank">React Minimal Pie Chart</a> library. </li>
+            <li>Icons created by the awesome <a href="https://fontawesome.com/license" title="Visit FontAwesome's licence agreement" target="_blank">Font Awesome</a></li>
+            <li>Partially inspired by Julia Dufresne's fantastic project <a href="https://github.com/juliadufresne/julia-dufresne-deeper" title="Visit Julia Defresne's GitHub page for the project, Deeper" target="_blank">Deeper</a>.</li>
           </ul>
-        </nav>
+
+        </section>
+        <section className="me">
+
+          <h3>Me</h3>
+          <nav>
+            <ul>
+              <li>
+                <a href="https://twitter.com/taylorRdev" title="Click to access Taylor's Twitter page"target="_blank">
+                  <FontAwesomeIcon icon={faTwitter} size="2x" />
+                </a>
+                
+              </li>
+              <li>
+                <a href="https://github.com/QuercusTaliare" title="Click to access the website's Github repo" target="_blank">
+                  <FontAwesomeIcon icon={faGithub} size="2x" />
+                </a>
+                
+              </li>
+            </ul>
+          </nav>
+          <p>Made with <span aria-label="love">♥</span> during emotionally turbulent times in Burlington, ON</p>
+          
+
+        </section>
       </footer>
     )
 
