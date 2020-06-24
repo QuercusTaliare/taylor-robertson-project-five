@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import firebase from './firebase.js';
+import Header from './components/Header';
 import Form from './components/Form';
 import Display from './components/Display';
 import Footer from './components/Footer';
@@ -83,6 +84,8 @@ class App extends Component {
 
     return (
       <Fragment>
+
+        <Header />
 
         <Form scrollPage={this.scrollPage}/>
 

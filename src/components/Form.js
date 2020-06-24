@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import firebase from '../firebase';
-import Header from './Header';
 
 class Form extends Component {
 
@@ -72,10 +71,8 @@ class Form extends Component {
 
     return(
 
-      <section className="form" id="form">
-
-        <Header />
-
+      <Fragment>
+        
         <div className="wrapper">
 
           <main>
@@ -94,7 +91,7 @@ class Form extends Component {
                       onChange={this.handleChange}
                       value={this.state.emotionAtype}
                     >
-                      <option value="" disabled>Select First Emotion</option>
+                      <option value="" disabled>Select 1st Emotion</option>
                       <option value="happy">Happy</option>
                       <option value="elated">Elated</option>
                       <option value="proud">Proud</option>
@@ -119,7 +116,6 @@ class Form extends Component {
                     />
                     <span>%</span>
                   </div>
-                  
                 </fieldset>
 
                 <fieldset>
@@ -131,7 +127,7 @@ class Form extends Component {
                       onChange={this.handleChange}
                       value={this.state.emotionBtype}
                     >
-                      <option value="" disabled>Select Second Emotion</option>
+                      <option value="" disabled>Select 2nd Emotion</option>
                       <option value="insecure">Insecure</option>
                       <option value="annoyed">Annoyed</option>
                       <option value="anxious">Anxious</option>
@@ -167,7 +163,7 @@ class Form extends Component {
                       onChange={this.handleChange}
                       value={this.state.emotionCtype}
                     >
-                      <option value="" disabled>Select Third Emotion</option>
+                      <option value="" disabled>Select 3rd Emotion</option>
                       <option value="confused">Confused</option>
                       <option value="hungry">Hungry</option>
                       <option value="silly">Silly</option>
@@ -223,8 +219,9 @@ class Form extends Component {
           </main>
 
         </div> {/* wrapper ends */}
-
-      </section> // Form Section ends 
+      
+      </Fragment>
+      
 
     )
 

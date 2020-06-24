@@ -6,7 +6,7 @@ class Header extends Component {
     
     return (
       
-      <header>
+      <header id="header">
         <h1>feels</h1>
         <ul>
           <li><em>Choose 3 emotions</em> that you're feeling the most right now.</li>
