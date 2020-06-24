@@ -65,14 +65,14 @@ class Form extends Component {
 
   render() {
 
-    const emotionPercentage = parseInt(this.state.emotionApercentage) + parseInt(this.state.emotionBpercentage) + parseInt(this.state.emotionCpercentage);
+    const emotionPercentage = parseInt(this.state.emotionApercentage) + parseInt(this.state.emotionBpercentage) + parseInt(this.state.emotionCpercentage) || "Please only use numbers, my friend!";
 
     return(
 
       <div className="form" id="form">
 
         <header>
-          <h1>Pie me a Sliver</h1>
+          <h1>feels</h1>
           <ol>
             <li>Choose 3 emotions that you're feeling the most right now.   <em>Note: You have to choose all 3!</em></li>
             <li>Decide how much of each emotion you're feeling.  <em>Note: These have to add up to 100%!</em></li>
@@ -173,7 +173,7 @@ class Form extends Component {
                     <option value="peaceful">Peaceful</option>
                     <option value="awed">Awed</option>
                     <option value="awkward">Awkward</option>
-                    <option value="nostalgia">Nostalgia</option>
+                    <option value="nostalgic">Nostalgic</option>
                     <option value="triumphant">Triumphant</option>
                     <option value="curious">Curious</option>
                     <option value="entranced">Entranced</option>
@@ -194,11 +194,14 @@ class Form extends Component {
 
               </div>
 
+
+
               <p className="percentage-fraction">
+                = 
                 {(emotionPercentage === 100)
-                  ? <span className="form-complete">{emotionPercentage}</span>
-                  : <span className="form-incomplete">{emotionPercentage}</span>}%
-                </p>
+                  ? <span className="form-complete">{emotionPercentage}%</span>
+                  : <span className="form-incomplete">{emotionPercentage}%</span>}
+              </p>
 
               {(emotionPercentage === 100 && this.state.emotionAtype !== "" && this.state.emotionBtype !== "" && this.state.emotionCtype !== "")
                 ? <button 
@@ -210,7 +213,7 @@ class Form extends Component {
                     }}
                     title="Submit form to create pie chart"
                   >Submit</button>
-                : <button type="submit" className="button disabled" tabindex="-1">Submit</button>}
+                : <button type="submit" className="button disabled" tabIndex="-1">Submit</button>}
 
 
             </form>

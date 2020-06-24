@@ -101,7 +101,7 @@ header {
 /* https://jsfiddle.net/dcodesmith/DruxN/ */
 
 header h1 {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin: 10px 0 20px 0;
     font-size: 4rem;
 }
@@ -279,7 +279,11 @@ main .button.disabled {
     text-align: center;
 }
 
-.display .button {
+.display .pie-display-button {
+    padding: 10px;
+}
+
+.display .add-another-button {
     margin-bottom: 30px;
 }
 

@@ -54,6 +54,13 @@ class Display extends Component {
 
                   <PieLegend emotionEntry={emotionEntry}/>
 
+                  <button 
+                    className="button pie-display-button"
+                    onClick={() => this.props.deleteChart(emotionEntry.id)}
+                  >
+                    X
+                  </button>
+
                 </li>
 
               )
@@ -62,7 +69,7 @@ class Display extends Component {
 
           </ul>
 
-          <a href="#form" className="button" title="Click to be brought to the top of the page, where you can create a pie chart">Add Another</a>
+          <a href="#form" className="button add-another-button" title="Click to be brought to the top of the page, where you can create a pie chart">Add Another</a>
 
         </section>
 
