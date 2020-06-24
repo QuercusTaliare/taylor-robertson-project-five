@@ -87,25 +87,27 @@ class Form extends Component {
 
                 <fieldset>
                   <legend className="sr-only">Emotion 1</legend>
-                  <select
-                    name="emotionAtype"
-                    className="user-entry"
-                    onChange={this.handleChange}
-                    value={this.state.emotionAtype}
-                  >
-                    <option value="" disabled>Select First Emotion</option>
-                    <option value="happy">Happy</option>
-                    <option value="elated">Elated</option>
-                    <option value="proud">Proud</option>
-                    <option value="amazed">Amazed</option>
-                    <option value="excited">Excited</option>
-                    <option value="determined">Determined</option>
-                    <option value="content">Content</option>
-                    <option value="hopeful">Hopeful</option>
-                    <option value="relieved">Relieved</option>
-                    <option value="joy">Joy</option>
-                  </select>
-                  <div>
+                  <div className="select-container">
+                    <select
+                      name="emotionAtype"
+                      className="user-entry"
+                      onChange={this.handleChange}
+                      value={this.state.emotionAtype}
+                    >
+                      <option value="" disabled>Select First Emotion</option>
+                      <option value="happy">Happy</option>
+                      <option value="elated">Elated</option>
+                      <option value="proud">Proud</option>
+                      <option value="amazed">Amazed</option>
+                      <option value="excited">Excited</option>
+                      <option value="determined">Determined</option>
+                      <option value="content">Content</option>
+                      <option value="hopeful">Hopeful</option>
+                      <option value="relieved">Relieved</option>
+                      <option value="joy">Joy</option>
+                    </select>
+                  </div>
+                  <div className="input-container">
                     <input
                       type="number"
                       name="emotionApercentage"
@@ -117,29 +119,32 @@ class Form extends Component {
                     />
                     <span>%</span>
                   </div>
+                  
                 </fieldset>
 
                 <fieldset>
                   <legend className="sr-only">Emotion 2</legend>
-                  <select
-                    name="emotionBtype"
-                    className="user-entry"
-                    onChange={this.handleChange}
-                    value={this.state.emotionBtype}
-                  >
-                    <option value="" disabled>Select Second Emotion</option>
-                    <option value="insecure">Insecure</option>
-                    <option value="annoyed">Annoyed</option>
-                    <option value="anxious">Anxious</option>
-                    <option value="bored">Bored</option>
-                    <option value="frustrated">Frustrated</option>
-                    <option value="sad">Sad</option>
-                    <option value="jealous">Jealous</option>
-                    <option value="hurt">Hurt</option>
-                    <option value="disgusted">Disgusted</option>
-                    <option value="angry">Angry</option>
-                  </select>
-                  <div>
+                  <div className="select-container">
+                    <select
+                      name="emotionBtype"
+                      className="user-entry"
+                      onChange={this.handleChange}
+                      value={this.state.emotionBtype}
+                    >
+                      <option value="" disabled>Select Second Emotion</option>
+                      <option value="insecure">Insecure</option>
+                      <option value="annoyed">Annoyed</option>
+                      <option value="anxious">Anxious</option>
+                      <option value="bored">Bored</option>
+                      <option value="frustrated">Frustrated</option>
+                      <option value="sad">Sad</option>
+                      <option value="jealous">Jealous</option>
+                      <option value="hurt">Hurt</option>
+                      <option value="disgusted">Disgusted</option>
+                      <option value="angry">Angry</option>
+                    </select>
+                  </div>
+                  <div className="input-container">
                     <input
                       type="number"
                       name="emotionBpercentage"
@@ -155,25 +160,27 @@ class Form extends Component {
 
                 <fieldset>
                   <legend className="sr-only">Emotion 3</legend>
-                  <select
-                    name="emotionCtype"
-                    className="user-entry"
-                    onChange={this.handleChange}
-                    value={this.state.emotionCtype}
-                  >
-                    <option value="" disabled>Select Third Emotion</option>
-                    <option value="confused">Confused</option>
-                    <option value="hungry">Hungry</option>
-                    <option value="silly">Silly</option>
-                    <option value="peaceful">Peaceful</option>
-                    <option value="awed">Awed</option>
-                    <option value="awkward">Awkward</option>
-                    <option value="nostalgic">Nostalgic</option>
-                    <option value="triumphant">Triumphant</option>
-                    <option value="curious">Curious</option>
-                    <option value="entranced">Entranced</option>
-                  </select>
-                  <div>
+                  <div className="select-container">
+                    <select
+                      name="emotionCtype"
+                      className="user-entry"
+                      onChange={this.handleChange}
+                      value={this.state.emotionCtype}
+                    >
+                      <option value="" disabled>Select Third Emotion</option>
+                      <option value="confused">Confused</option>
+                      <option value="hungry">Hungry</option>
+                      <option value="silly">Silly</option>
+                      <option value="peaceful">Peaceful</option>
+                      <option value="awed">Awed</option>
+                      <option value="awkward">Awkward</option>
+                      <option value="nostalgic">Nostalgic</option>
+                      <option value="triumphant">Triumphant</option>
+                      <option value="curious">Curious</option>
+                      <option value="entranced">Entranced</option>
+                    </select>
+                  </div>
+                  <div className="input-container">
                     <input
                       type="number"
                       name="emotionCpercentage"

@@ -164,12 +164,22 @@ main .user-entry {
     border-radius: 4px;
 }
 
+/* Properly centers select in Chrome and Edge  */
+main .select-container {
+    text-align: center;
+}
+
 main select {
     padding: 5px 20px;
     font-family: var(--main-font);
     margin: 0 0 20px;
     font-size: 1.8rem;
     width: 230px;
+}
+
+/* Properly centers input in Chrome and Edge  */
+main .input-container {
+    text-align: center;
 }
 
 main input {
