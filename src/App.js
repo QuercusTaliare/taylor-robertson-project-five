@@ -51,8 +51,11 @@ class App extends Component {
 
       }
 
+      // Reverse, so the newest entries are displayed when rendered to page
+      const reverseNewState = newState.reverse();
+
       // 3. Set State with changed copy
-      this.setState({ emotions: newState });
+      this.setState({ emotions: reverseNewState });
 
     })
 
