@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Form from './components/Form';
 import Display from './components/Display';
 import Footer from './components/Footer';
-import { isIE } from 'react-device-detect';
 
 class App extends Component {
   
@@ -82,10 +81,6 @@ class App extends Component {
   }
 
   render() {
-
-    if (isIE) return (
-      <div> IE is not supported on this website. Please download Firefox, Chrome, Edge, or Safari for a faster, safer browsing experience! </div>
-    )
 
     return (
       <Fragment>
