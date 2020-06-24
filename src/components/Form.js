@@ -15,9 +15,10 @@ class Form extends Component {
     }
   }
 
-  
+  // FORM METHODS
 
   // HANDLE CHANGE FUNCTION - Updates state everytime a value changes in either the dropdowns or the inputs
+  // Adapted from Juno Bookshelf Code-along
   handleChange = (event) => {
 
     this.setState({
@@ -27,6 +28,8 @@ class Form extends Component {
   }
 
   // ADD CHART DATA FUNCTION - Takes form input data and puts it into database
+  // Adapted from Juno Bookshelf Code-along
+  // Event Listener on Submit Button
   addChartData = (e) => {
 
     e.preventDefault();
@@ -59,17 +62,16 @@ class Form extends Component {
       emotionCtype: "",
     })
 
-    // window.scrollTo(0, this.scrollDisplay.current.offsetTop)
-
   }
 
   render() {
 
+    // The total of 3 percentage inputs, with error handling for NaN
     const emotionPercentage = parseInt(this.state.emotionApercentage) + parseInt(this.state.emotionBpercentage) + parseInt(this.state.emotionCpercentage) || "Please only use numbers, my friend!";
 
     return(
 
-      <div className="form" id="form">
+      <section className="form" id="form">
 
         <header>
           <h1>feels</h1>
@@ -82,11 +84,10 @@ class Form extends Component {
 
         <div className="wrapper">
 
-
           <main>
             <form>
 
-              <h2>How are you feeling?</h2>
+              <h2>How's it going?</h2>
 
               <div className="emotion-entry-container">
 
@@ -195,14 +196,15 @@ class Form extends Component {
               </div>
 
 
-
+              {/* Displays total percentage of inputted values */}
               <p className="percentage-fraction">
                 = 
                 {(emotionPercentage === 100)
                   ? <span className="form-complete">{emotionPercentage}%</span>
                   : <span className="form-incomplete">{emotionPercentage}%</span>}
               </p>
-
+              
+              {/* Makes Submit button clickable when form is filled */}
               {(emotionPercentage === 100 && this.state.emotionAtype !== "" && this.state.emotionBtype !== "" && this.state.emotionCtype !== "")
                 ? <button 
                     type="submit" 
@@ -215,13 +217,13 @@ class Form extends Component {
                   >Submit</button>
                 : <button type="submit" className="button disabled" tabIndex="-1">Submit</button>}
 
-
             </form>
+
           </main>
 
         </div> {/* wrapper ends */}
 
-      </div> 
+      </section> // Form Section ends 
 
     )
 

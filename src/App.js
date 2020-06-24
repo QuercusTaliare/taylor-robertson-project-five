@@ -12,17 +12,15 @@ class App extends Component {
     this.state = {
 
       emotions: [],
-      emotionAtype: "",
-      emotionBtype: "",
-      emotionCtype: "",
-      emotionApercentage: 33,
-      emotionBpercentage: 33,
-      emotionCpercentage: 34
-
+      
     }
 
+    // Creates reference for Display component, for scrolling
+    // Passed into Display component
     this.scrollDisplay = React.createRef();
   }
+
+  //LIFECYCLE METHODS
 
   // Updates state everytime the database is updated
   // Adapted from Juno Bookshelf Code-along
@@ -62,8 +60,11 @@ class App extends Component {
 
   }
 
+  // APP METHODS
+
   // DELETE CHART FUNCTION - Deletes a chart from the Display Component
-  // Borrowed from Juno Bookshelf Code-along
+  // Adapted from Juno Bookshelf Code-along
+  // Called in Display component
   deleteChart = (emotionId) => {
     
     const dbRef = firebase.database().ref();
@@ -73,55 +74,9 @@ class App extends Component {
   }
 
   // SCROLL PAGE FUNCTION - Scrolls to Display component
+  // Called in Form component
   scrollPage = () => {
     window.scrollTo(0, this.scrollDisplay.current.offsetTop)
-  }
-
-  // HANDLE CHANGE FUNCTION - Updates state everytime a value changes in either the dropdowns or the inputs
-  // Borrowed from Juno Bookshelf Code-along
-  handleChange = (event) => {
-
-    this.setState({
-      [event.target.name]: event.target.value,
-    })
-
-  }
-
-  // ADD CHART DATA FUNCTION - Takes form input data and puts it into database
-  addChartData = (e) => {
-
-    e.preventDefault();
-    
-    const dbRef = firebase.database().ref();
-
-    dbRef.push({
-
-      emotionA: {
-        percentage: this.state.emotionApercentage,
-        type: this.state.emotionAtype
-      },
-      emotionB: {
-        percentage: this.state.emotionBpercentage,
-        type: this.state.emotionBtype
-      },
-      emotionC: {
-        percentage: this.state.emotionCpercentage,
-        type: this.state.emotionCtype
-      }
-
-    });
-
-    this.setState({ 
-      emotionApercentage: 33,
-      emotionAtype: "",
-      emotionBpercentage: 33,
-      emotionBtype: "",
-      emotionCpercentage: 34,
-      emotionCtype: "",
-    })
-
-    window.scrollTo(0, this.scrollDisplay.current.offsetTop)
-    
   }
 
   render() {

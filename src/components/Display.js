@@ -13,12 +13,12 @@ class Display extends Component {
 
         <section className="display" ref={this.props.scrollDisplay}>
 
-          <h2>à la Mood</h2>
+          <h2>many moods</h2>
 
           {/* Loops through the emotions array that was passed down through props */}
           <ul className="pie-display-list">
             
-            {this.props.chartData.map((emotionEntry, index) => {
+            {this.props.chartData.map((emotionEntry) => {
 
               const { emotionA, emotionB, emotionC } = emotionEntry.threeEmotions;
               
@@ -29,7 +29,7 @@ class Display extends Component {
                   <div className="chart-wrapper" aria-label={`An emotional pie-chart comprised of ${emotionA.type} (${emotionA.percentage}%), ${emotionB.type} (${emotionB.percentage}%), and ${emotionC.type} (${emotionC.percentage}%)`} >
                       {/* Pre-built component from react-minimal-pie-chart library */}
                       <PieChart
-                      
+                        // Pie Chart rendered by passing in props below
                         data={[
                           {
                             color: "#3F84E5",
@@ -69,11 +69,13 @@ class Display extends Component {
 
           </ul>
 
-          <a href="#form" className="button add-another-button" title="Click to be brought to the top of the page, where you can create a pie chart">Add Another</a>
+          <a href="#form" className="button add-another-button" title="Click to be brought to the top of the page, where you can create a pie chart">
+            Add Another
+          </a>
 
-        </section>
+        </section> {/* display section ends  */}
 
-      </div>
+      </div> // wrapper ends
       
     )
 
