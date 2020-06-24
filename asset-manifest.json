@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/taylor-robertson-project-five/static/css/main.2eb5d23a.chunk.css",
-    "main.js": "/taylor-robertson-project-five/static/js/main.c3a19531.chunk.js",
-    "main.js.map": "/taylor-robertson-project-five/static/js/main.c3a19531.chunk.js.map",
+    "main.css": "/taylor-robertson-project-five/static/css/main.28922e44.chunk.css",
+    "main.js": "/taylor-robertson-project-five/static/js/main.308bcf7c.chunk.js",
+    "main.js.map": "/taylor-robertson-project-five/static/js/main.308bcf7c.chunk.js.map",
     "runtime-main.js": "/taylor-robertson-project-five/static/js/runtime-main.0ebcd1d2.js",
     "runtime-main.js.map": "/taylor-robertson-project-five/static/js/runtime-main.0ebcd1d2.js.map",
-    "static/js/2.9394ba4f.chunk.js": "/taylor-robertson-project-five/static/js/2.9394ba4f.chunk.js",
-    "static/js/2.9394ba4f.chunk.js.map": "/taylor-robertson-project-five/static/js/2.9394ba4f.chunk.js.map",
+    "static/js/2.106944b1.chunk.js": "/taylor-robertson-project-five/static/js/2.106944b1.chunk.js",
+    "static/js/2.106944b1.chunk.js.map": "/taylor-robertson-project-five/static/js/2.106944b1.chunk.js.map",
     "index.html": "/taylor-robertson-project-five/index.html",
-    "precache-manifest.2e14f13456e4087d0fd407a91346cca0.js": "/taylor-robertson-project-five/precache-manifest.2e14f13456e4087d0fd407a91346cca0.js",
+    "precache-manifest.e385ff69a910bcc83aebe997d7719e9c.js": "/taylor-robertson-project-five/precache-manifest.e385ff69a910bcc83aebe997d7719e9c.js",
     "service-worker.js": "/taylor-robertson-project-five/service-worker.js",
-    "static/css/main.2eb5d23a.chunk.css.map": "/taylor-robertson-project-five/static/css/main.2eb5d23a.chunk.css.map",
-    "static/js/2.9394ba4f.chunk.js.LICENSE.txt": "/taylor-robertson-project-five/static/js/2.9394ba4f.chunk.js.LICENSE.txt"
+    "static/css/main.28922e44.chunk.css.map": "/taylor-robertson-project-five/static/css/main.28922e44.chunk.css.map",
+    "static/js/2.106944b1.chunk.js.LICENSE.txt": "/taylor-robertson-project-five/static/js/2.106944b1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0ebcd1d2.js",
-    "static/js/2.9394ba4f.chunk.js",
-    "static/css/main.2eb5d23a.chunk.css",
-    "static/js/main.c3a19531.chunk.js"
+    "static/js/2.106944b1.chunk.js",
+    "static/css/main.28922e44.chunk.css",
+    "static/js/main.308bcf7c.chunk.js"
   ]
 }
