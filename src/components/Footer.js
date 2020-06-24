@@ -38,7 +38,7 @@ class Footer extends Component {
               </li>
               <li>
 
-                <a href="https://github.com/QuercusTaliare" title="Click to access the website's Github repo" target="_blank">
+                <a href="https://github.com/QuercusTaliare" title="Click to access Taylor's GitHub" target="_blank">
                   <FontAwesomeIcon 
                     icon={faGithub} 
                     size="1x" 

@@ -318,6 +318,12 @@ footer .attributions {
     padding: 0 20px 0 0;
 }
 
+.attributions p,
+.attributions li,
+.me p {
+    letter-spacing: -0.3px;
+}
+
 .attributions li {
     padding: 5px 0;
     list-style-type: circle;
