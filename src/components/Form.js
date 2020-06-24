@@ -75,11 +75,11 @@ class Form extends Component {
 
         <header>
           <h1>feels</h1>
-          <ol>
-            <li>Choose 3 emotions that you're feeling the most right now.   <em>Note: You have to choose all 3!</em></li>
-            <li>Decide how much of each emotion you're feeling.  <em>Note: These have to add up to 100%!</em></li>
-            <li>Press Submit and see your pie-chart come to life!</li>
-          </ol>
+          <ul>
+            <li><em>Choose 3 emotions</em> that you're feeling the most right now.</li>
+            <li><em>Select how much (%)</em> of each emotion you're feeling.</li>
+            <li><em>Press Submit</em>and see your pie-chart come to life!</li>
+          </ul>
         </header>
 
         <div className="wrapper">

@@ -15,7 +15,7 @@ class Footer extends Component {
           </p>
           <ul>
             <li>Pie Charts rendered by the wonderful <a href="https://github.com/toomuchdesign/react-minimal-pie-chart" title="Visit the react-minimal-pie-chart GitHub repo" target="_blank">React Minimal Pie Chart</a> library. </li>
-            <li>Icons created by the awesome <a href="https://fontawesome.com/license" title="Visit FontAwesome's licence agreement" target="_blank">Font Awesome</a></li>
+            <li>Icons created by the awesome <a href="https://fontawesome.com/license" title="Visit FontAwesome's licence agreement" target="_blank">Font Awesome</a>.</li>
             <li>Partially inspired by Julia Dufresne's fantastic project <a href="https://github.com/juliadufresne/julia-dufresne-deeper" title="Visit Julia Defresne's GitHub page for the project, Deeper" target="_blank">Deeper</a>.</li>
           </ul>
 

@@ -12,6 +12,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+/* FONTS / COLOURS  */
+
 :root {
     --header-font: 'Raleway', sans-serif;
     --main-font: 'Lato', sans-serif;
@@ -23,6 +25,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     --neutral-color: #E8F7EE;
 
 }
+
+/* GLOBAL  */
 
 * {
     margin: 0;
@@ -77,17 +81,15 @@ a {
 
 .wrapper {
     max-width: 1280px;
-
     margin: 0 auto;
-
     width: 90%;
 }
+
+/* FORM  */
 
 .form {
     height: 100vh;
 }
-
-/* FORM COMPONENT */
 
 header {
     height: 30vh;
@@ -101,28 +103,32 @@ header {
 /* https://jsfiddle.net/dcodesmith/DruxN/ */
 
 header h1 {
-    /* text-transform: uppercase; */
-    margin: 10px 0 20px 0;
-    font-size: 4rem;
+    text-transform: lowercase;
+    margin: 10px 0;
+    font-size: 5rem;
 }
 
-header ol {
+header ul {
     padding: 10px;
+    letter-spacing: -0.3px;
+    /* text-transform: ; */
 }
 
 header li {
-    list-style-type: upper-roman;
+    list-style-type: circle;
     list-style-position: inside;
     margin: 0 0 10px 0;
     padding: 0 10px;
 
 }
 
+header em {
+    text-transform: uppercase;
+    font-style: normal;
+}
+
 main {
     height: 70vh;
-    /* margin: 40px 0 0 0; */
-    /* box-shadow: -10px -5px 0px 0px var(--highlight-color); */
-    /* background: var(--neutral-color); */
     border-left: solid 10px var(--highlight-color);
 
 }
@@ -132,13 +138,13 @@ main form {
     flex-direction: column;
     align-items: center;
 
-
 }
 
 main h2 {
     padding: 40px 0 20px 0;
     text-align: center;
     font-size: 3.5rem;
+    text-transform: capitalize;
 }
 
 main .emotion-entry-container {
@@ -201,9 +207,7 @@ main .button.disabled {
 
 }
 
-
-
-/* DISPLAY SECTION  */
+/* DISPLAY  */
 
 .display {
     border-top: solid 10px var(--highlight-color);
@@ -211,7 +215,6 @@ main .button.disabled {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin: 0 0 30px 0; */
 }
 
 .display h2 {
@@ -290,7 +293,6 @@ main .button.disabled {
 /* FOOTER  */
 
 footer {
-    /* margin: 30px 0 0 0; */
     box-shadow: 10px 10px 0 0 inset var(--highlight-color);
     padding: 20px;
     background: var(--neutral-color);
@@ -349,6 +351,8 @@ footer .me {
     opacity: 0.5;
 }
 
+/* MEDIA QUERIES  */
+
 @media (max-width: 600px) {
 
     .form {
@@ -361,7 +365,7 @@ footer .me {
     }
 
     header h1 {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
 
     main {
@@ -376,6 +380,15 @@ footer .me {
     footer {
         box-shadow: none;
         flex-wrap: wrap;
+    }
+
+    footer .attributions,
+    footer .me {
+        flex: 1 1 auto;
+    }
+
+    .attributions {
+        padding: 0;
     }
 
     .attributions h3 {
