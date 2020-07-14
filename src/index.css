@@ -17,9 +17,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 :root {
     --header-font: 'Raleway', sans-serif;
     --main-font: 'Lato', sans-serif;
-    --emotionA-color: #3F84E5;
-    --emotionB-color: #960200;
-    --emotionC-color: #3F784C;
+    /* --emotionA-color: #3F84E5; */
+    /* --emotionB-color: #960200; */
+    /* --emotionC-color: #3F784C; */
     --highlight-color: #B2E6D4;
     --highlight-dark-color: #329A76;
     --neutral-color: #E8F7EE;
@@ -249,20 +249,29 @@ main .button.disabled {
 
 .display .legend-item {
     display: flex;
+    border-bottom: solid 1px var(--highlight-color);
+}
+
+.display .colour {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    margin: auto 25px auto 0;
 }
 
 .display .legend-item p {
     padding: 10px 10px;
     width: 150px;
     border-bottom: solid 1px var(--highlight-color);
-    
 }
+
+
 
 .display .emotion {
     text-transform: capitalize;
 }
 
-.display .emotion::before {
+/* .display .emotion::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -282,7 +291,7 @@ main .button.disabled {
 
 .display .emotion-three::before {
     background: var(--emotionC-color);
-}
+} */
 
 .display .percentage {
     text-align: center;
