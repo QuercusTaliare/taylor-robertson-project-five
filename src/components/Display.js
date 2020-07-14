@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 // https://github.com/toomuchdesign/react-minimal-pie-chart
 import { PieChart } from 'react-minimal-pie-chart';
 import PieLegend from './PieLegend';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 class Display extends Component {
@@ -64,6 +66,19 @@ class Display extends Component {
 
                 <li className="pie-display-item" key={emotionEntry.id}>
 
+                  <div className="button-container">
+                    <button
+                      className="button pie-display-button"
+                      onClick={() => this.props.deleteChart(emotionEntry.id)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faTrashAlt}
+                        size="1x"
+                        className="trash-icon"
+                      />
+                    </button>
+                  </div>
+
                   <div className="chart-wrapper" aria-label={`An emotional pie-chart comprised of ${emotionA.type} (${emotionA.percentage}%), ${emotionB.type} (${emotionB.percentage}%), and ${emotionC.type} (${emotionC.percentage}%)`} >
                       {/* Pre-built component from react-minimal-pie-chart library */}
                       <PieChart
@@ -98,12 +113,14 @@ class Display extends Component {
                     colours={this.state.colours}
                   />
 
-                  <button 
-                    className="button pie-display-button"
-                    onClick={() => this.props.deleteChart(emotionEntry.id)}
-                  >
-                    X
-                  </button>
+                  {/* <div className="button-container">
+                    <button 
+                      className="button pie-display-button"
+                      onClick={() => this.props.deleteChart(emotionEntry.id)}
+                    >
+                      X
+                    </button>
+                  </div> */}
 
                 </li>
 
