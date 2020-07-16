@@ -17,9 +17,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 :root {
     --header-font: 'Raleway', sans-serif;
     --main-font: 'Lato', sans-serif;
-    /* --emotionA-color: #3F84E5; */
-    /* --emotionB-color: #960200; */
-    /* --emotionC-color: #3F784C; */
     --highlight-color: #B2E6D4;
     --highlight-dark-color: #329A76;
     --neutral-color: #E8F7EE;
@@ -255,7 +252,7 @@ main .button.disabled {
 
 .display .pie-display-button {
     padding: 10px;
-    background: lightgrey;
+    background: var(--light-grey);
 }
 
 .display .pie-display-button:hover,
@@ -265,7 +262,12 @@ main .button.disabled {
 
 .display .trash-icon {
     font-size: 2.4rem;
-    color: grey;
+    color: var(--dark-grey);
+}
+
+.display .pie-display-button:hover .trash-icon,
+.display .pie-display-button:focus .trash-icon {
+    color: var(--delete);
 }
 
 .chart-wrapper {
@@ -295,28 +297,6 @@ main .button.disabled {
 .display .emotion {
     text-transform: capitalize;
 }
-
-/* .display .emotion::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    margin: 0 25px -3px 0;
-    border-radius: 2px;
-    display: inline-block;
-
-}
-
-.display .emotion-one::before {
-    background: var(--emotionA-color);
-}
-
-.display .emotion-two::before {
-    background: var(--emotionB-color);
-}
-
-.display .emotion-three::before {
-    background: var(--emotionC-color);
-} */
 
 .display .percentage {
     text-align: center;

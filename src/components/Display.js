@@ -70,6 +70,7 @@ class Display extends Component {
                     <button
                       className="button pie-display-button"
                       onClick={() => this.props.deleteChart(emotionEntry.id)}
+                      title="Delete Pie Chart"
                     >
                       <FontAwesomeIcon
                         icon={faTrashAlt}
