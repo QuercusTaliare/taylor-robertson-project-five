@@ -23,6 +23,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     --highlight-color: #B2E6D4;
     --highlight-dark-color: #329A76;
     --neutral-color: #E8F7EE;
+    --dark-grey: darkgrey;
+    --light-grey: lightgrey;
+    --delete: #CC2936;
 
 }
 
@@ -241,8 +244,28 @@ main .button.disabled {
     align-items: center;
     padding: 10px 0 50px 0;
     margin: 10px;
-    border: solid 2px var(--highlight-color);
+    border: solid 3px var(--highlight-color);
     border-radius: 2px;
+}
+
+.display .button-container {
+    width: 90%;
+    text-align: end;
+}
+
+.display .pie-display-button {
+    padding: 10px;
+    background: lightgrey;
+}
+
+.display .pie-display-button:hover,
+.display .pie-display-button:focus {
+    box-shadow: 0 0 5px 3px inset var(--delete);
+}
+
+.display .trash-icon {
+    font-size: 2.4rem;
+    color: grey;
 }
 
 .chart-wrapper {
@@ -299,18 +322,7 @@ main .button.disabled {
     text-align: center;
 }
 
-.display .button-container {
-    width: 90%;
-    text-align: end;
-}
 
-.display .pie-display-button {
-    padding: 10px;
-}
-
-.display .trash-icon {
-    font-size: 2.4rem;
-}
 
 .display .add-another-button {
     margin-bottom: 30px;
