@@ -17,12 +17,12 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 :root {
     --header-font: 'Raleway', sans-serif;
     --main-font: 'Lato', sans-serif;
-    --emotionA-color: #3F84E5;
-    --emotionB-color: #960200;
-    --emotionC-color: #3F784C;
     --highlight-color: #B2E6D4;
     --highlight-dark-color: #329A76;
     --neutral-color: #E8F7EE;
+    --dark-grey: darkgrey;
+    --light-grey: lightgrey;
+    --delete: #CC2936;
 
 }
 
@@ -235,11 +235,39 @@ main .button.disabled {
 }
 
 .display .pie-display-item {
-    flex: 1 1 50%;
+    flex: 1 1 calc(50% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 0 50px 0;
+    margin: 10px;
+    border: solid 3px var(--highlight-color);
+    border-radius: 2px;
+}
+
+.display .button-container {
+    width: 90%;
+    text-align: end;
+}
+
+.display .pie-display-button {
+    padding: 10px;
+    background: var(--light-grey);
+}
+
+.display .pie-display-button:hover,
+.display .pie-display-button:focus {
+    box-shadow: 0 0 5px 3px inset var(--delete);
+}
+
+.display .trash-icon {
+    font-size: 2.4rem;
+    color: var(--dark-grey);
+}
+
+.display .pie-display-button:hover .trash-icon,
+.display .pie-display-button:focus .trash-icon {
+    color: var(--delete);
 }
 
 .chart-wrapper {
@@ -249,48 +277,32 @@ main .button.disabled {
 
 .display .legend-item {
     display: flex;
+    border-bottom: solid 1px var(--highlight-color);
+}
+
+.display .colour {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    margin: auto 25px auto 0;
 }
 
 .display .legend-item p {
     padding: 10px 10px;
     width: 150px;
-    border-bottom: solid 1px var(--highlight-color);
-    
 }
+
+
 
 .display .emotion {
     text-transform: capitalize;
-}
-
-.display .emotion::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    margin: 0 25px -3px 0;
-    border-radius: 2px;
-    display: inline-block;
-
-}
-
-.display .emotion-one::before {
-    background: var(--emotionA-color);
-}
-
-.display .emotion-two::before {
-    background: var(--emotionB-color);
-}
-
-.display .emotion-three::before {
-    background: var(--emotionC-color);
 }
 
 .display .percentage {
     text-align: center;
 }
 
-.display .pie-display-button {
-    padding: 10px;
-}
+
 
 .display .add-another-button {
     margin-bottom: 30px;
