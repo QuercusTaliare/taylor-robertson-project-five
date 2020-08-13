@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/taylor-robertson-project-five/precache-manifest.e385ff69a910bcc83aebe997d7719e9c.js"
+  "/taylor-robertson-project-five/precache-manifest.ce1a0a7ac9714e3adc6fd7fcb5de74f4.js"
 );
 
 self.addEventListener('message', (event) => {
