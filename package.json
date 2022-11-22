@@ -19,7 +19,7 @@
     "react-device-detect": "^1.13.1",
     "react-dom": "^16.13.1",
     "react-minimal-pie-chart": "^8.0.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "predeploy": "npm run build",
